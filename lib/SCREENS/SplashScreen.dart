@@ -1,8 +1,10 @@
-import 'package:coffeeapp/SCREENS/Screen_One.dart';
+import 'package:coffeeapp/SCREENS/Home_Screen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -12,10 +14,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const ScreenOne()),
+        MaterialPageRoute(builder: (context) => const Home_Screen()),
       );
     });
   }
@@ -29,10 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/images/SPLASH-removebg-preview.png",
+              "assets/images/Rectangle 4.png",
             ),
             const Text(
-              "M.A COFFEE SHOP",
+              "MUHAMMAD AAZIM",
               style: TextStyle(
                 color: Color(0xff38220F),
                 fontSize: 24.0,
